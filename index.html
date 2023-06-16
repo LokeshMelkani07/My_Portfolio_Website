@@ -4,6 +4,716 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost&family=Montserrat&family=Poppins&family=Roboto&family=Rubik+Bubbles&family=Spline+Sans+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: #f5efe7;
+        font-family: "Poppins", sans-serif;
+      }
+
+      a:active {
+        color: white;
+      }
+
+      nav {
+        background-color: #ebe4dc;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 10px;
+      }
+
+      nav ul {
+        display: flex;
+        justify-content: center;
+      }
+
+      nav ul li {
+        list-style: none;
+        margin: 0px 23px;
+        cursor: pointer;
+        font-weight: bold;
+      }
+
+      .right ul li a {
+        text-decoration: none;
+      }
+
+      .left h1 a {
+        text-decoration: none;
+      }
+
+      nav ul li:hover {
+        color: #090580;
+        transform: scale(1.1);
+      }
+
+      .left {
+        color: #090580;
+        font-size: 1.1rem;
+      }
+
+      .left h1 {
+        font-family: "Montserrat", sans-serif;
+        font-weight: bolder;
+        font-size: 2rem;
+      }
+
+      /* Main */
+
+      .firstSection {
+        margin: 15px 0px;
+        padding: 0px 20px;
+      }
+
+      .mainSection {
+        display: flex;
+        justify-content: space-around;
+        background-color: black;
+        width: 100%;
+        height: 50%;
+      }
+
+      .mainSection div {
+        width: 40%;
+        margin-bottom: 20px;
+      }
+
+      .leftSection {
+        /* background-color: blue; */
+        text-align: left;
+        /* color: red; */
+        color: #090580;
+        font-weight: bolder;
+        font-size: 3rem;
+        margin-top: 10%;
+        /* margin-bottom: 10%; */
+        margin-left: 20px;
+      }
+
+      .leftSection div {
+        width: 100%;
+        text-align: left;
+      }
+
+      .slide-left p {
+        animation: slide-left 5s;
+      }
+
+      @keyframes slide-left {
+        from {
+          margin-left: 100%;
+          width: 100%;
+        }
+
+        to {
+          margin-left: 0%;
+          width: 100%;
+        }
+      }
+
+      .slide-left p span {
+        background-image: linear-gradient(to right, #8360c3, #2ebf91);
+      }
+
+      .shine p {
+        position: relative;
+        font-size: 45px;
+        letter-spacing: 2px;
+        background: linear-gradient(90deg, #90ee90, #fff, #000);
+        background-repeat: no-repeat;
+        background-size: 80%;
+        animation: animate 5s infinite;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: rgba(255, 255, 255, 0);
+      }
+
+      @keyframes animate {
+        0% {
+          background-position: -500%;
+        }
+        100% {
+          background-position: 500%;
+        }
+      }
+
+      .rightSection img {
+        height: 550px;
+        object-fit: contain;
+        width: 500px;
+        margin-bottom: 10px;
+      }
+
+      /* Second Section About Me */
+
+      .secondSection {
+        margin: 15px 0px;
+        padding: 0px 20px;
+      }
+
+      /* .secondSection h1 {
+        color: white;
+        font-weight: bold;
+        width: fit-content;
+        background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+      } */
+
+      .secondSection h1 {
+        border-radius: 5px;
+        color: black;
+        font-weight: bold;
+        width: fit-content;
+        background: inherit;
+        background-image: linear-gradient(
+          -225deg,
+          #fff4f4 0%,
+          #ffe7ce 29%,
+          #ece5c7 100%
+        );
+        background-size: auto auto;
+        background-clip: border-box;
+        background-size: 200% auto;
+        animation: textclip 2s linear infinite;
+        padding: 5px;
+      }
+
+      @keyframes textclip {
+        to {
+          background-position: 200% center;
+        }
+      }
+
+      .mainSecondSection {
+        display: flex;
+        justify-content: space-around;
+        background-color: black;
+        width: 100%;
+        height: 50%;
+      }
+
+      .mainSecondSection div {
+        width: 40%;
+        margin-bottom: 20px;
+      }
+
+      .rightSecondSection {
+        margin: 10px 0px;
+      }
+
+      .rightSecondSection img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .leftSecondSection {
+        margin: 10px 0px;
+        color: white;
+      }
+
+      .leftSecondSection span {
+        color: #ff8551;
+      }
+
+      /* Third Section My Projects */
+
+      .thirdSection {
+        margin: 15px 0px;
+        padding: 0px 20px;
+      }
+
+      .mainThirdSection {
+        display: flex;
+        justify-content: space-around;
+        background-color: black;
+        width: 100%;
+        height: 50%;
+      }
+
+      .leftThirdSection {
+        margin: 10px 0px;
+        color: white;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        /* flex-wrap: wrap; */
+        justify-content: space-around;
+      }
+
+      /* .thirdSection h1 {
+        color: white;
+        font-weight: bold;
+        width: fit-content;
+        background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+      } */
+
+      .thirdSection h1 {
+        border-radius: 5px;
+        color: black;
+        font-weight: bold;
+        width: fit-content;
+        background: inherit;
+        background-image: linear-gradient(
+          -225deg,
+          #fff4f4 0%,
+          #ffe7ce 29%,
+          #ece5c7 100%
+        );
+        background-size: auto auto;
+        background-clip: border-box;
+        background-size: 200% auto;
+        animation: textclipthree 2s linear infinite;
+        padding: 5px;
+      }
+
+      @keyframes textclipthree {
+        to {
+          background-position: 200% center;
+        }
+      }
+
+      .card {
+        background-color: #f5efe7;
+        width: 200px;
+        height: 200px;
+        margin: 10px;
+        border-radius: 15px;
+        padding: 5px;
+        object-fit: contain;
+      }
+
+      .card:hover {
+        transform: scale(1.1);
+      }
+
+      .card img {
+        width: 100%;
+        height: 60%;
+        object-fit: cover;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+      }
+
+      .card div {
+        font-size: 0.8rem;
+        font-weight: bold;
+      }
+
+      .card div a {
+        text-decoration: none;
+      }
+
+      /* Fourth Section Contact Me */
+
+      .fourthSection {
+        margin: 15px 0px;
+        padding: 0px 20px;
+      }
+
+      .mainFourthSection {
+        display: flex;
+        justify-content: space-around;
+        background-color: black;
+        width: 100%;
+        height: 50%;
+      }
+
+      .leftFourthSection {
+        margin: 10px 0px;
+        color: white;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        /* flex-wrap: wrap; */
+        justify-content: space-around;
+      }
+
+      /* .fourthSection h1 {
+        color: white;
+        font-weight: bold;
+        width: fit-content;
+        background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+      } */
+
+      .fourthSection h1 {
+        border-radius: 5px;
+        color: black;
+        font-weight: bold;
+        width: fit-content;
+        background: inherit;
+        background-image: linear-gradient(
+          -225deg,
+          #fff4f4 0%,
+          #ffe7ce 29%,
+          #ece5c7 100%
+        );
+        background-size: auto auto;
+        background-clip: border-box;
+        background-size: 200% auto;
+        animation: textclipfour 2s linear infinite;
+        padding: 5px;
+      }
+
+      @keyframes textclipfour {
+        to {
+          background-position: 200% center;
+        }
+      }
+
+      .cardContact {
+        background-color: #f5efe7;
+        width: 200px;
+        height: 200px;
+        margin: 10px;
+        border-radius: 15px;
+        padding: 5px;
+        object-fit: contain;
+      }
+
+      .cardContact:hover {
+        transform: scale(1.1);
+      }
+
+      .cardContact img {
+        width: 100%;
+        height: 80%;
+        object-fit: cover;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+      }
+
+      .cardContact div {
+        font-size: 0.8rem;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      .cardContact div a {
+        text-decoration: none;
+      }
+
+      /* Fifth Section Coding Profile */
+      .fifthSection {
+        margin: 15px 0px;
+        padding: 0px 20px;
+      }
+
+      .mainFifthSection {
+        display: flex;
+        justify-content: space-around;
+        background-color: black;
+        width: 100%;
+        height: 50%;
+      }
+
+      .leftFifthSection {
+        margin: 10px 0px;
+        color: white;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        /* flex-wrap: wrap; */
+        justify-content: space-around;
+      }
+
+      /* .fifthSection h1 {
+        color: white;
+        font-weight: bold;
+        width: fit-content;
+        background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+      } */
+
+      .fifthSection h1 {
+        border-radius: 5px;
+        color: black;
+        font-weight: bold;
+        width: fit-content;
+        background: inherit;
+        background-image: linear-gradient(
+          -225deg,
+          #fff4f4 0%,
+          #ffe7ce 29%,
+          #ece5c7 100%
+        );
+        background-size: auto auto;
+        background-clip: border-box;
+        background-size: 200% auto;
+        animation: textclipfive 2s linear infinite;
+        padding: 5px;
+      }
+
+      @keyframes textclipfive {
+        to {
+          background-position: 200% center;
+        }
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <nav>
+        <div class="left">
+          <h1><a href="/">My Portfolio</a></h1>
+        </div>
+        <div class="right">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="#aboutMe">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact Me</a></li>
+            <li><a href="#coding">Coding Profile</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="firstSection">
+        <div class="mainSection">
+          <div class="leftSection">
+            <span style="color: white">Hello, My Name is</span>
+            <div class="shine">
+              <p>Lokesh Melkani</p>
+            </div>
+            <div class="slide-left">
+              <p>
+                I am a
+                <span>Web Developer</span>
+              </p>
+            </div>
+          </div>
+          <div class="rightSection">
+            <img src="./My project.png" alt="My Image" />
+          </div>
+        </div>
+      </section>
+      <section class="secondSection" id="aboutMe">
+        <h1>About Me</h1>
+        <br />
+        <div class="mainSecondSection">
+          <div class="leftSecondSection">
+            <p>
+              My Name is Lokesh Melkani. I am an
+              <span>Electrical and Electronics Engineering Graduate</span>
+              (2020-2024) from
+              <span>Maharaja Agrasen Institute of Technology</span>. I live in
+              <span>New Delhi</span> and I have Interest in Software
+              Developement. I make Websites which can be used by People and
+              Businesses to showcase their products and interact with their
+              Customers.I have experience of
+              <span
+                >working as a Software Engineer Intern for a Product Based
+                Startup</span
+              >. I love to constantly seek out innovative solutions to everyday
+              problems. I have Made over
+              <span
+                >56 Projects and have solved over 600+ Problems in Data
+                Structures and Algorithms</span
+              >. My hobbie includes Gymming, Playing Cricket, Reading Books and
+              Playing Badminton. My
+              <span
+                >Career Goal is Move forward in the field of Software
+                Developement and Learn new things and apply them in my day to
+                day work</span
+              >.
+            </p>
+          </div>
+          <div class="rightSecondSection">
+            <img src="./about.jpg" alt="About Me" />
+          </div>
+        </div>
+      </section>
+      <section class="thirdSection" id="projects">
+        <h1>My Projects</h1>
+        <br />
+        <div class="mainThirdSection">
+          <div class="leftThirdSection">
+            <div class="card">
+              <img src="./pro1.jpg" alt="1st project" />
+              <div>
+                <h2>
+                  <a href="https://minotebook-mern-lokesh.netlify.app/"
+                    >miNotebook</a
+                  >
+                </h2>
+                <p>
+                  <a
+                    style="color: #ff8551"
+                    href="https://github.com/LokeshMelkani07/miNotebook"
+                    >Github</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="card">
+              <img src="./pro2.webp" alt="2nd project" />
+              <div>
+                <h2>
+                  <a href="https://foodish-mern-lokesh.netlify.app/"
+                    >Food Delivery App</a
+                  >
+                </h2>
+                <p>
+                  <a
+                    style="color: #ff8551"
+                    href="https://github.com/LokeshMelkani07/Food-Delivery-App"
+                    >Github</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="card">
+              <img src="./pro3.jpg" alt="3rd project" />
+              <div>
+                <h2>
+                  <a href="https://myfitness-gym-lokesh.netlify.app/"
+                    >MyFitness Gym</a
+                  >
+                </h2>
+                <p>
+                  <a
+                    style="color: #ff8551"
+                    href="https://github.com/LokeshMelkani07/MyFitness_Gym"
+                    >Github</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="card">
+              <img src="./pro4.avif" alt="4th project" />
+              <div>
+                <h2>
+                  <a href="https://your-travel-guru.web.app/">TravelGuru</a>
+                </h2>
+                <p>
+                  <a
+                    style="color: #ff8551"
+                    href="https://github.com/LokeshMelkani07/TravelGuru"
+                    >Github</a
+                  >
+                </p>
+              </div>
+            </div>
+            <div class="card">
+              <a
+                style="text-decoration: none"
+                href="https://github.com/LokeshMelkani07?tab=repositories"
+              >
+                <img src="./pro5.jpg" alt="My all repositories" />
+                <div>
+                  <h2>Click To See More</h2>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Contact Me Section -->
+      <section class="fourthSection" id="contact">
+        <h1>Contact Me</h1>
+        <br />
+        <div class="mainFourthSection">
+          <div class="leftFourthSection">
+            <div class="cardContact">
+              <a
+                style="text-decoration: none"
+                href="https://www.linkedin.com/in/lokesh-melkani-22572b218/"
+              >
+                <img src="./con1.png" alt="My LinkedIn" />
+                <div>
+                  <h2>LinkedIn</h2>
+                </div>
+              </a>
+            </div>
+            <div class="cardContact">
+              <a
+                style="text-decoration: none"
+                href="https://github.com/LokeshMelkani07"
+              >
+                <img src="./con2.webp" alt="My Github" />
+                <div>
+                  <h2>Github</h2>
+                </div>
+              </a>
+            </div>
+            <div class="cardContact">
+              <a
+                style="text-decoration: none"
+                href="https://www.instagram.com/lokesh_melkani/"
+              >
+                <img src="./con3.webp" alt="My Instagram" />
+                <div>
+                  <h2>Instagram</h2>
+                </div>
+              </a>
+            </div>
+            <div class="cardContact">
+              <a
+                style="text-decoration: none"
+                href="mailto: lokeshmelkani5102001@gmail.com"
+              >
+                <img src="./con4.png" alt="My Gmail" />
+                <div>
+                  <h2>Gmail</h2>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Fifth Section Coding Profiles -->
+      <section class="fifthSection" id="coding">
+        <h1>Coding Profile</h1>
+        <br />
+        <div class="mainFifthSection">
+          <div class="leftFifthSection">
+            <div class="cardContact">
+              <a
+                style="text-decoration: none"
+                href="https://leetcode.com/LokeshMelkani/"
+              >
+                <img src="./cp1.png" alt="My Leetcode profile" />
+                <div>
+                  <h2>Leetcode</h2>
+                </div>
+              </a>
+            </div>
+            <div class="cardContact">
+              <a
+                style="text-decoration: none"
+                href="https://www.codingninjas.com/codestudio/profile/lokesh_77"
+              >
+                <img src="./cp3.png" alt="My CodeStudio Profile" />
+                <div>
+                  <h2>CodeStudio</h2>
+                </div>
+              </a>
+            </div>
+            <div class="cardContact">
+              <a
+                style="text-decoration: none"
+                href="https://auth.geeksforgeeks.org/user/lokeshmelkani5102001/?utm_source=geeksforgeeks&utm_medium=my_profile&utm_campaign=auth_user"
+              >
+                <img src="./cp2.png" alt="My GFG" />
+                <div>
+                  <h2>GfG</h2>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
