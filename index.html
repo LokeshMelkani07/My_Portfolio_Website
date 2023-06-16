@@ -125,6 +125,20 @@
         background-image: linear-gradient(to right, #8360c3, #2ebf91);
       }
 
+      .slide-left button {
+        width: fit-content;
+        height: fit-content;
+        padding: 5px;
+        border-radius: 5px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-top: 7%;
+      }
+
+      .slide-left button:hover {
+        background-color: #ebe4dc;
+      }
+
       .shine p {
         position: relative;
         font-size: 45px;
@@ -161,11 +175,11 @@
       }
 
       /* .secondSection h1 {
-        color: white;
-        font-weight: bold;
-        width: fit-content;
-        background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e);
-      } */
+            color: white;
+            font-weight: bold;
+            width: fit-content;
+            background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+          } */
 
       .secondSection h1 {
         border-radius: 5px;
@@ -251,11 +265,11 @@
       }
 
       /* .thirdSection h1 {
-        color: white;
-        font-weight: bold;
-        width: fit-content;
-        background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e);
-      } */
+            color: white;
+            font-weight: bold;
+            width: fit-content;
+            background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+          } */
 
       .thirdSection h1 {
         border-radius: 5px;
@@ -340,11 +354,11 @@
       }
 
       /* .fourthSection h1 {
-        color: white;
-        font-weight: bold;
-        width: fit-content;
-        background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e);
-      } */
+            color: white;
+            font-weight: bold;
+            width: fit-content;
+            background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+          } */
 
       .fourthSection h1 {
         border-radius: 5px;
@@ -429,11 +443,11 @@
       }
 
       /* .fifthSection h1 {
-        color: white;
-        font-weight: bold;
-        width: fit-content;
-        background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e);
-      } */
+            color: white;
+            font-weight: bold;
+            width: fit-content;
+            background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+          } */
 
       .fifthSection h1 {
         border-radius: 5px;
@@ -459,6 +473,186 @@
           background-position: 200% center;
         }
       }
+
+      /* Sixth Section Languages Known */
+      .sixthSection {
+        margin: 15px 0px;
+        padding: 0px 20px;
+      }
+
+      .mainSixthSection {
+        display: flex;
+        justify-content: space-around;
+        background-color: black;
+        width: 100%;
+        height: 50%;
+      }
+
+      .leftSixthSection {
+        margin: 10px 0px;
+        color: white;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+
+      .sixthSection h1 {
+        border-radius: 5px;
+        color: black;
+        font-weight: bold;
+        width: fit-content;
+        background: inherit;
+        background-image: linear-gradient(
+          -225deg,
+          #fff4f4 0%,
+          #ffe7ce 29%,
+          #ece5c7 100%
+        );
+        background-size: auto auto;
+        background-clip: border-box;
+        background-size: 200% auto;
+        animation: textclipfive 2s linear infinite;
+        padding: 5px;
+      }
+
+      @keyframes textclipfive {
+        to {
+          background-position: 200% center;
+        }
+      }
+
+      .cardLanguage {
+        background-color: #f5efe7;
+        width: 130px;
+        height: 130px;
+        margin: 10px;
+        border-radius: 15px;
+        padding: 5px;
+        object-fit: contain;
+      }
+
+      .cardLanguage:hover {
+        transform: scale(1);
+      }
+
+      .cardLanguage img {
+        width: 100%;
+        height: 80%;
+        object-fit: cover;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+      }
+
+      .cardLanguage div {
+        font-size: 0.7rem;
+        font-weight: bold;
+        text-align: center;
+        color: #551a8b;
+      }
+
+      .cardLanguage div a {
+        text-decoration: none;
+      }
+
+      /* footer */
+      footer {
+        background-color: #e9e2da;
+        text-align: center;
+        font-size: 1.4rem;
+        font-weight: normal;
+      }
+
+      .heart {
+        display: inline-block;
+        /* Animation */
+        transform: scale(1);
+        animation: pulse 2s linear infinite;
+      }
+
+      @keyframes pulse {
+        0% {
+          transform: scale(1.1);
+          opacity: 0;
+        }
+        50% {
+          transform: scale(1.2);
+          opacity: 1;
+        }
+        100% {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+
+      /* Responsiveness */
+      @media only screen and (max-width: 1045px) {
+        .mainSection {
+          flex-direction: column;
+        }
+
+        .rightSection img {
+          height: 100%;
+          object-fit: contain;
+          width: 100%;
+          /* margin-bottom: 10px; */
+        }
+
+        .mainSection div {
+          width: 85%;
+          /* background-color: red; */
+        }
+        .mainSecondSection {
+          flex-direction: column;
+          /* width: 100%; */
+          /* background-color: red; */
+          /* display: flex;
+            justify-content: space-around;
+            background-color: black;
+            height: 50%; */
+        }
+
+        .mainSecondSection div {
+          width: 95%;
+          margin-bottom: 5px;
+          padding: 10px;
+        }
+
+        .leftThirdSection {
+          /* margin: 10px 0px;
+          color: white;
+          width: 100%;
+          height: 100%; */
+          /* display: flex; */
+          flex-direction: column;
+          /* flex-wrap: wrap; */
+          /* justify-content: space-around; */
+        }
+
+        .card {
+          margin: auto;
+          margin-bottom: 5%;
+        }
+
+        .leftFourthSection {
+          flex-direction: column;
+        }
+
+        .leftFifthSection {
+          flex-direction: column;
+        }
+
+        .cardContact {
+          margin: auto;
+          margin-bottom: 5%;
+        }
+
+        nav {
+          display: none;
+        }
+      }
     </style>
   </head>
   <body>
@@ -474,6 +668,7 @@
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact Me</a></li>
             <li><a href="#coding">Coding Profile</a></li>
+            <li><a href="#languages">Skills</a></li>
           </ul>
         </div>
       </nav>
@@ -491,6 +686,15 @@
                 I am a
                 <span>Web Developer</span>
               </p>
+              <button>
+                <a
+                  style="text-decoration: none"
+                  href="./resume.pdf"
+                  download="Resume"
+                >
+                  Download Resume
+                </a>
+              </button>
             </div>
           </div>
           <div class="rightSection">
@@ -499,7 +703,10 @@
         </div>
       </section>
       <section class="secondSection" id="aboutMe">
-        <h1>About Me</h1>
+        <h1>
+          <span style="color: #551a8b">About Me</span>
+          <i class="fa-solid fa-address-card"></i>
+        </h1>
         <br />
         <div class="mainSecondSection">
           <div class="leftSecondSection">
@@ -511,11 +718,14 @@
               <span>New Delhi</span> and I have Interest in Software
               Developement. I make Websites which can be used by People and
               Businesses to showcase their products and interact with their
-              Customers.I have experience of
+              Customers.
+              <span> I build WebApps and Websites using MERN Stack. </span> I
+              have experience of
               <span
                 >working as a Software Engineer Intern for a Product Based
-                Startup</span
-              >. I love to constantly seek out innovative solutions to everyday
+                Startup.</span
+              >
+              I love to constantly seek out innovative solutions to everyday
               problems. I have Made over
               <span
                 >56 Projects and have solved over 600+ Problems in Data
@@ -523,10 +733,10 @@
               >. My hobbie includes Gymming, Playing Cricket, Reading Books and
               Playing Badminton. My
               <span
-                >Career Goal is Move forward in the field of Software
+                >Career Goal is to move forward in the field of Software
                 Developement and Learn new things and apply them in my day to
-                day work</span
-              >.
+                day work.</span
+              >
             </p>
           </div>
           <div class="rightSecondSection">
@@ -535,7 +745,10 @@
         </div>
       </section>
       <section class="thirdSection" id="projects">
-        <h1>My Projects</h1>
+        <h1>
+          <span style="color: #551a8b">My Projects</span>
+          <i class="fa-solid fa-briefcase"></i>
+        </h1>
         <br />
         <div class="mainThirdSection">
           <div class="leftThirdSection">
@@ -621,7 +834,10 @@
       </section>
       <!-- Contact Me Section -->
       <section class="fourthSection" id="contact">
-        <h1>Contact Me</h1>
+        <h1>
+          <span style="color: #551a8b">Contact Me</span>
+          <i class="fa-solid fa-address-book"></i>
+        </h1>
         <br />
         <div class="mainFourthSection">
           <div class="leftFourthSection">
@@ -674,7 +890,10 @@
       </section>
       <!-- Fifth Section Coding Profiles -->
       <section class="fifthSection" id="coding">
-        <h1>Coding Profile</h1>
+        <h1>
+          <span style="color: #551a8b">Coding Profile</span>
+          <i class="fa-solid fa-user"></i> <i class="fa-solid fa-code"></i>
+        </h1>
         <br />
         <div class="mainFifthSection">
           <div class="leftFifthSection">
@@ -714,6 +933,155 @@
           </div>
         </div>
       </section>
+      <!-- Sixth Section Languages Known -->
+      <section class="sixthSection" id="languages">
+        <h1>
+          <span style="color: #551a8b">Skills & Abilities</span>
+          <i class="fa-solid fa-computer"></i>
+        </h1>
+        <br />
+        <div class="mainSixthSection">
+          <div class="leftSixthSection">
+            <div class="cardLanguage">
+              <img src="./l0.png" alt="C++" />
+              <div>
+                <h2>C++</h2>
+              </div>
+            </div>
+            <div class="cardLanguage">
+              <img src="./l1.png" alt="JS" />
+              <div>
+                <h2>Javascript</h2>
+              </div>
+            </div>
+            <div class="cardLanguage">
+              <img src="./l2.png" alt="HTML" />
+              <div>
+                <h2>HTML</h2>
+              </div>
+            </div>
+            <div class="cardLanguage">
+              <img src="./l3.png" alt="CSS" />
+              <div>
+                <h2>CSS</h2>
+              </div>
+            </div>
+            <div class="cardLanguage">
+              <img src="./l4.png" alt="React" />
+              <div>
+                <h2>React</h2>
+              </div>
+            </div>
+            <div class="cardLanguage">
+              <img src="./l5.png" alt="Node" />
+              <div>
+                <h2>Node</h2>
+              </div>
+            </div>
+            <div class="cardLanguage">
+              <img src="./l6.webp" alt="Firebase" />
+              <div>
+                <h2>Firebase</h2>
+              </div>
+            </div>
+            <div class="cardLanguage">
+              <img src="./l7.png" alt="Redux" />
+              <div>
+                <h2>Redux</h2>
+              </div>
+            </div>
+            <div class="cardLanguage">
+              <img src="./l8.png" alt="Express" />
+              <div>
+                <h2>Express</h2>
+              </div>
+            </div>
+            <div class="cardLanguage">
+              <img src="./l9.webp" alt="MaterialUI" />
+              <div>
+                <h2>Material UI</h2>
+              </div>
+            </div>
+            <div class="cardLanguage">
+              <img src="./l10.avif" alt="Bootstrap" />
+              <div>
+                <h2>Bootstrap</h2>
+              </div>
+            </div>
+            <div class="cardLanguage">
+              <img src="./l11.png" alt="Tailwind CSS" />
+              <div>
+                <h2>Tailwind CSS</h2>
+              </div>
+            </div>
+            <div class="cardLanguage">
+              <img src="./l12.png" alt="Mongodb" />
+              <div>
+                <h2>MongoDB</h2>
+              </div>
+            </div>
+            <div class="cardLanguage">
+              <img src="./l13.png" alt="Heroku" />
+              <div>
+                <h2>Heroku</h2>
+              </div>
+            </div>
+            <div class="cardLanguage">
+              <img src="./l14.png" alt="Netlify" />
+              <div>
+                <h2>Netlify</h2>
+              </div>
+            </div>
+            <div class="cardLanguage">
+              <img src="./l15.webp" alt="Github" />
+              <div>
+                <h2>Github</h2>
+              </div>
+            </div>
+            <div class="cardLanguage">
+              <img src="./l16.jpg" alt="NextJS" />
+              <div>
+                <h2>NextJS</h2>
+              </div>
+            </div>
+            <div class="cardLanguage">
+              <img src="./l15.webp" alt="Github" />
+              <div>
+                <h2>Github</h2>
+              </div>
+            </div>
+            <div class="cardLanguage">
+              <img src="./l17.png" alt="Sanity" />
+              <div>
+                <h2>Sanity</h2>
+              </div>
+            </div>
+            <div class="cardLanguage">
+              <img src="./l18.png" alt="Stripe" />
+              <div>
+                <h2>Stripe</h2>
+              </div>
+            </div>
+            <div class="cardLanguage">
+              <img src="./l19.webp" alt="Postman" />
+              <div>
+                <h2>Postman</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
+    <footer>
+      <div>
+        Designed with
+        <div class="heart">❤️</div>
+        by Lokesh Melkani
+      </div>
+    </footer>
   </body>
+  <script
+    src="https://kit.fontawesome.com/aaf9fca085.js"
+    crossorigin="anonymous"
+  ></script>
 </html>
